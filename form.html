@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="conatiner">
+    <form action="#" onsubmit="return validation()">
+        <label>FirstName :</label>
+        <input type="text" name="firstName" class="form-control" id="first" autocomplete="off">
+        <span id="fi" style="color:red"></span><br><br>
+
+        <label>LastName:</label>
+        <input type="text" name="lastName" class="form-control" id="last" autocomplete="off">
+        <span id="ls" style="color:red"></span><br><br>
+
+        <label>email :</label>
+        <input type="email" name="email" class="form-control" id="em" autocomplete="off">
+        <span id="emai" style="color:red"></span><br><br>
+        
+        <label>password :</label>
+        <input type="password" name="pass" class="form-control" id="pass" autocomplete="off">
+        <span id="pass" style="color:red"></span><br><br>
+
+        <label>confirm password :</label>
+        <input type="password" name="conpass" class="form-control" id="conpass" autocomplete="off">
+        <span id="conpas" style="color:red"></span><br><br>
+         
+        <input type="submit" name="submit" value="create">
+        
+        
+    </form>
+    </div>
+    <script type="text/javascript">
+        function validation(){
+            var firstName=document.getElementById('first').value;
+            var lastName=document.getElementById('last').value;
+            var email=document.getElementById('em').value;
+            var pass=document.getElementById('pass').value;
+            var conpass=document.getElementById('conpass').value;
+
+            if (firstName==""){
+                document.getElementById('fi').innerHTML=" ** please fill the first name";
+                return false;
+            }
+            if (lastName==""){
+                document.getElementById('ls').innerHTML=" ** please fill the last name";
+                return false;
+            }
+            if (email==""){
+                document.getElementById('emai').innerHTML=" ** please fill the eamil name";
+                return false;
+            }
+            if (pass==""){
+                document.getElementById('pass').innerHTML=" ** please enter password";
+                return false;
+            }
+            if(pass!=conpass){
+                document.getElementById('pass').innerHTML=" ** password not matching ";
+                return false
+            }
+            if (conpass==""){
+                document.getElementById('conpas').innerHTML=" ** please confirm password";
+                return false;
+            }
+
+          
+        }
+
+    </script>
+</body>
+</html>

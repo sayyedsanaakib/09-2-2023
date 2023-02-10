@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Even or Odd</title>
+		<script>
+			function find() {
+				
+				var n = Number(document.getElementById("number").value);
+				
+				if(isNaN(n)) 
+					document.getElementById("result").innerHTML = "<b style='color:blue'>You must enter a number!</b>";
+				else if(n<=0) {
+					document.getElementById("result").innerHTML = "<b style='color:blue'>You must enter a number greater than 0!</b>";
+				}
+				else if(n%2==0)
+					document.getElementById("result").innerHTML = "<b style='color:purple'>Given number is an even.</b>";
+				else	
+					document.getElementById("result").innerHTML = "<b style='color:purple'>Given number is an odd.</b>";
+			
+			}
+		</script>
+		<body>
+		Number: <input type="text" id="number" />
+		<br/>
+		<br/>
+		<button onclick="find();">Find</button>
+		<br/>
+		<br/>
+		<div id="result" />
+		
+		</head>
+	</body>
+</html>
